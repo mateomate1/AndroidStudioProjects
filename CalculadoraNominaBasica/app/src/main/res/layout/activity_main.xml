@@ -7,6 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/introDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textDias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/introHoras"
+        app:layout_constraintTop_toTopOf="@+id/textDias" />
+
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
@@ -41,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="200dp"
         android:text="Horas:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo" />
@@ -50,18 +64,18 @@
         android:id="@+id/textDias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="Dias:"
         app:layout_constraintStart_toStartOf="@+id/textoHoras"
         app:layout_constraintTop_toBottomOf="@+id/textoHoras" />
 
     <EditText
-        android:id="@+id/introDias"
+        android:id="@+id/introHoras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="130dp"
         android:ems="10"
-        android:inputType="number|numberDecimal"
+        android:inputType="text"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/textoHoras"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,29 +83,45 @@
         app:layout_constraintStart_toEndOf="@+id/textoHoras"
         app:layout_constraintTop_toTopOf="@+id/textoHoras" />
 
-    <EditText
-        android:id="@+id/introDias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="130dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:selectAllOnFocus="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textDias"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textDias"
-        app:layout_constraintTop_toTopOf="@+id/textDias"
-        tools:ignore="DuplicateIds" />
-
     <TextView
         android:id="@+id/lblPago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Pago:"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="246dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/introDias"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="234dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/introHoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titulo"
+        app:srcCompat="@mipmap/blackMarket" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonBorrar" />
+
+    <Button
+        android:id="@+id/buttonBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="BORRAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPago" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

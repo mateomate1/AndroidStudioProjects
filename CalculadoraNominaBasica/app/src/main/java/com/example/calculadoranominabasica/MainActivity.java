@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final float pagoHora = 13,75;
     private float pago;
+    private String introDias, introHoras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        introDias = findViewById(@R.id.introDias);
     }
 
-    private int
 }
