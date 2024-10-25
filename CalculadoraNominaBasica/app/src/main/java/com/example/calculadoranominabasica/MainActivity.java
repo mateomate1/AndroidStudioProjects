@@ -3,7 +3,10 @@ package com.example.calculadoranominabasica;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,9 +18,15 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private final float pagoHora = 13.75f;
-    private float pago;
+    private float desc;
+    private float pagoNum = 0;
+    private String pago = "";
     private EditText introDias, introHoras;
-    private TextView valorPaga;
+    private CheckBox checkBoxPago, checkBoxDescuento;
+    private TextView valorPaga, valorDescuento;
+    private RadioButton radioButtonSi, radioButtonNo;
+
+    private boolean round = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,18 +34,50 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Vincula los elementos de la interfaz
         introDias = findViewById(R.id.introDias);
         introHoras = findViewById(R.id.introHoras);
+        checkBoxPago = findViewById(R.id.checkBoxPago);
+        checkBoxDescuento = findViewById(R.id.checkBoxDescuento);
         valorPaga = findViewById(R.id.valorPaga);
+        valorDescuento = findViewById(R.id.valorDescuento);
         Button buttonCalcular = findViewById(R.id.buttonCalcular);
+        Button buttonBorrar = findViewById(R.id.buttonBorrar);
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        radioButtonSi = findViewById(R.id.RadioButtonSi);
+        radioButtonNo = findViewById(R.id.RadioButtonNo);
 
-        // Establece un listener para el botón de calcular
         buttonCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calcularPago();
             }
+        });
+
+        buttonBorrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                borrar();
+            }
+        });
+
+        checkBoxPago.setOnCheckedChangeListener((buttonView, isCheked)->{
+            if (isCheked)
+                valorPaga.setText(pago);
+            else
+                valorPaga.setText("");
+        });
+
+        checkBoxDescuento.setOnCheckedChangeListener((buttonView, isCheked)->{
+            if (isCheked) {
+                desc = pagoNum > 2000 ? (float) (pagoNum * 0.1) : 0;
+                valorDescuento.setText(print(desc));
+            }
+            else
+                valorDescuento.setText("");
+        });
+
+        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            round = checkedId == R.id.RadioButtonSi;
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -54,15 +95,31 @@ public class MainActivity extends AppCompatActivity {
         String diasString = introDias.getText().toString();
         String horasString = introHoras.getText().toString();
 
-        // Convierte los valores a números
-        int dias = diasString.isEmpty() ? 0 : Integer.parseInt(diasString);
-        int horas = horasString.isEmpty() ? 0 : Integer.parseInt(horasString);
+        // Capturar excepcion en caso de no ser un numero
+        try {
+            // Convierte los valores a números decimales
+            float dias = diasString.isEmpty() ? 0 : Float.parseFloat(diasString);
+            float horas = horasString.isEmpty() ? 0 : Float.parseFloat(horasString);
 
-        // Calcula el pago
-        pago = dias * horas * pagoHora;
-
-        // Muestra el resultado en el TextView
-        valorPaga.setText(String.format("Pago: %.2f €", pago));
+            // Calcula el pago
+            pagoNum = dias * horas * pagoHora;
+            pago = print(pagoNum);
+        } catch (NumberFormatException e) {
+            pago = "ERROR...";
+        }
     }
+
+    private void borrar(){
+        introDias.setText("");
+        introHoras.setText("");
+        valorPaga.setText("");
+    }
+
+    private String print(float val){
+        if (round)
+            val = Math.round(val);
+        return String.format("%.2f €", val);
+    }
+
 
 }

@@ -93,17 +93,6 @@
         app:layout_constraintTop_toBottomOf="@+id/introDias"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/introHoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/titulo"
-        app:srcCompat="@mipmap/blackmarket" />
-
     <Button
         android:id="@+id/buttonCalcular"
         android:layout_width="wrap_content"
@@ -118,12 +107,12 @@
         android:id="@+id/buttonBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="64dp"
         android:text="BORRAR"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblPago" />
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/valorPaga"
@@ -133,5 +122,82 @@
         app:layout_constraintBottom_toBottomOf="@+id/lblPago"
         app:layout_constraintStart_toEndOf="@+id/lblPago"
         app:layout_constraintTop_toTopOf="@+id/lblPago" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pago"
+        app:layout_constraintStart_toStartOf="@+id/textDias"
+        app:layout_constraintTop_toBottomOf="@+id/textDias" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDescuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Descuento"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxPago"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPago" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo"
+        app:srcCompat="@mipmap/spiderman_logo" />
+
+    <TextView
+        android:id="@+id/lblDescuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Descuento:"
+        app:layout_constraintStart_toStartOf="@+id/lblPago"
+        app:layout_constraintTop_toBottomOf="@+id/lblPago" />
+
+    <TextView
+        android:id="@+id/valorDescuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblDescuento"
+        app:layout_constraintStart_toEndOf="@+id/lblDescuento"
+        app:layout_constraintTop_toTopOf="@+id/lblDescuento" />
+
+    <TextView
+        android:id="@+id/redondeo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Redondeo:"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxDescuento"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDescuento" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/redondeo"
+        app:layout_constraintStart_toEndOf="@+id/redondeo"
+        app:layout_constraintTop_toTopOf="@+id/redondeo">
+
+        <RadioButton
+            android:id="@+id/RadioButtonSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI" />
+
+        <RadioButton
+            android:id="@+id/RadioButtonNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
