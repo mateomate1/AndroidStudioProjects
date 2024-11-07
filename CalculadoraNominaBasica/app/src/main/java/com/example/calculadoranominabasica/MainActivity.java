@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private String pago = "";
     private EditText introDias, introHoras;
     private CheckBox checkBoxPago, checkBoxDescuento;
+    private boolean MostrarPago=false, MostrarDescuento=false;
     private TextView valorPaga, valorDescuento;
     private RadioButton radioButtonSi, radioButtonNo;
 
@@ -62,18 +63,13 @@ public class MainActivity extends AppCompatActivity {
 
         checkBoxPago.setOnCheckedChangeListener((buttonView, isCheked)->{
             if (isCheked)
-                valorPaga.setText(pago);
-            else
-                valorPaga.setText("");
+                MostrarPago = true;
         });
 
         checkBoxDescuento.setOnCheckedChangeListener((buttonView, isCheked)->{
             if (isCheked) {
-                desc = pagoNum > 2000 ? (float) (pagoNum * 0.1) : 0;
-                valorDescuento.setText(print(desc));
+                MostrarDescuento = true;
             }
-            else
-                valorDescuento.setText("");
         });
 
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
@@ -103,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
 
             // Calcula el pago
             pagoNum = dias * horas * pagoHora;
-            pago = print(pagoNum);
+            print(pagoNum);
         } catch (NumberFormatException e) {
-            pago = "ERROR...";
+            valorPaga.setText("ERROR...");
         }
     }
 
@@ -113,12 +109,33 @@ public class MainActivity extends AppCompatActivity {
         introDias.setText("");
         introHoras.setText("");
         valorPaga.setText("");
+        valorDescuento.setText("");
+        radioButtonNo.setChecked(false);
+        radioButtonSi.setChecked(false);
+        checkBoxPago.setChecked(false);
+        checkBoxDescuento.setChecked(false);
     }
 
-    private String print(float val){
-        if (round)
+    private void print(float val) {
+
+        if (round) {
             val = Math.round(val);
-        return String.format("%.2f €", val);
+        }
+
+        // Mostrar el pago si el checkbox "Mostrar Pago" está seleccionado
+        if (MostrarPago) {
+            valorPaga.setText(String.format("%.2f €", val));
+        } else {
+            valorPaga.setText("");  // Limpiar el TextView si no está seleccionado
+        }
+
+        // Calcular y mostrar el descuento si el checkbox "Mostrar Descuento" está seleccionado
+        if (MostrarDescuento) {
+            desc = val > 2000 ? val * 0.1f : 0;
+            valorDescuento.setText(String.format("%.2f €", desc));
+        } else {
+            valorDescuento.setText("");  // Limpiar el TextView si no está seleccionado
+        }
     }
 
 
