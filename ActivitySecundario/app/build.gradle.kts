@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.activitysecundario"
-        minSdk = 22
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
