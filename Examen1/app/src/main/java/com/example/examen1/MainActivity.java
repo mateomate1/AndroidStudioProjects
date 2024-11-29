@@ -22,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        /*
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
+        });*/
     }
 
     @Override
@@ -43,11 +44,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         if (id==R.id.opcAlarma){
-            Intent intent = new Intent(Intent.EXTRA_ALARM_COUNT);
+            Intent intent = new Intent(Intent.ACTION_DIAL);
             startActivity(intent);
         }
         if (id==R.id.opcMenu){
-
+            Intent intent = new Intent(MainActivity.this, Menu.class);
+            startActivity(intent);
         }
         if (id==R.id.opcAcercaDe){
             Toast.makeText(this, "Esta es la APP de Mateo Ayarra Barbero", Toast.LENGTH_LONG).show();

@@ -16,19 +16,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f9bbc1-9d00-4ab9-b3da-c1b6ab9bf54d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ActivitySecundario/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ActivitySecundario/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ActivitySecundario/app/src/main/java/com/example/activitysecundario/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ActivitySecundario/app/src/main/java/com/example/activitysecundario/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ActivitySecundario/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ActivitySecundario/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ActivitySecundario/app/src/main/res/layout/activity_secundario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ActivitySecundario/app/src/main/res/layout/activity_secundario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CiclodeVida/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CiclodeVida/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LayoutEjercicio1/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LayoutEjercicio1/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LayoutEjercicio1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LayoutEjercicio1/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListViewPersonalizado/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListViewPersonalizado/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListViewPersonalizado/app/src/main/java/com/example/listviewpersonalizado/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ListViewPersonalizado/app/src/main/java/com/example/listviewpersonalizado/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListViewPersonalizado/app/src/main/java/com/example/listviewpersonalizado/MiAdaptadorEjemplo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ListViewPersonalizado/app/src/main/java/com/example/listviewpersonalizado/MiAdaptadorEjemplo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListViewPersonalizado/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListViewPersonalizado/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-    </list>
+    <list default="true" id="69f9bbc1-9d00-4ab9-b3da-c1b6ab9bf54d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,9 +50,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/alumno/AndroidStudioProjects/Calculadorabasica"
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alumno/AndroidStudioProjects/Calculadora"
   }
 }]]></component>
   <component name="RunManager">
