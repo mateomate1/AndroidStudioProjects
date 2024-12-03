@@ -11,6 +11,16 @@
         android:id="@+id/btnCall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Llamar 112"
+        android:padding="10dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bntOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Abrir App de Llamadas"
         android:padding="10dp"
         android:backgroundTint="@android:color/holo_blue_light"

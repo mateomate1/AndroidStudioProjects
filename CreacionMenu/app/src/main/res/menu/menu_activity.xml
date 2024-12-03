@@ -3,10 +3,33 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
+
     <item android:id="@+id/Opcion_menu_1"
-        android:title="Cataluña"/>
-    <item android:id="@+id/Opcion_menu_2"
         android:title="Madrid"/>
+
+    <item android:id="@+id/Opcion_menu_2"
+        android:title="Cataluña">
+        <menu>
+            <item android:id="@+id/provincia_bcn"
+                android:title="Barcelona"/>
+            <item android:id="@+id/provincia_gir"
+                android:title="Girona"/>
+            <item android:id="@+id/provincia_tar"
+                android:title="Tarragona"/>
+            <item android:id="@+id/provincia_lle"
+                android:title="Lleida"/>
+        </menu>
+    </item>
+
     <item android:id="@+id/Opcion_menu_3"
-        android:title="Aragon"/>
+        android:title="Aragón">
+        <menu>
+            <item android:id="@+id/provincia_zar"
+                android:title="Zaragoza"/>
+            <item android:id="@+id/provincia_hue"
+                android:title="Huesca"/>
+            <item android:id="@+id/provincia_ter"
+                android:title="Teruel"/>
+        </menu>
+    </item>
 </menu>
