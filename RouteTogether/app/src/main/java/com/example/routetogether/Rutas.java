@@ -72,7 +72,7 @@ public class Rutas extends Fragment {
         rutaList.add(new Ruta("tren", "Estación a Montaña", "Estación Central", "Estación Montaña", dias2, "08:00"));
         rutaList.add(new Ruta("viaandante", "Caminata Sendero", "Inicio Sendero", "Final Sendero", dias4, "15:30"));
         AdaptadorRuta adaptador = new AdaptadorRuta(
-                this,
+                getContext(),
                 R.layout.layout_rutas,
                 rutaList
         );

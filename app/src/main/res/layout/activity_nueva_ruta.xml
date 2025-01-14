@@ -59,7 +59,7 @@
         android:text="Tipo de transporte:"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton7" />
 
     <RadioGroup
         android:layout_width="131dp"
@@ -140,20 +140,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton7"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginTop="40dp"
         android:button="@color/green"
         android:checked="false"
         android:gravity="center"
         android:text="L"
         android:textColor="@drawable/color_selected"
         app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton8"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -165,7 +164,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioButton7"
         app:layout_constraintTop_toTopOf="@+id/radioButton7" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton9"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -177,7 +176,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioButton8"
         app:layout_constraintTop_toTopOf="@+id/radioButton8" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton10"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -189,7 +188,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioButton9"
         app:layout_constraintTop_toTopOf="@+id/radioButton9" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton11"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -201,7 +200,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioButton10"
         app:layout_constraintTop_toTopOf="@+id/radioButton10" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton12"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -213,7 +212,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioButton11"
         app:layout_constraintTop_toTopOf="@+id/radioButton11" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/radioButton13"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -229,11 +228,11 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
+        android:layout_marginTop="16dp"
         android:text="Dias de la semana:"
         android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -245,6 +244,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
         app:srcCompat="@drawable/logocircular" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
