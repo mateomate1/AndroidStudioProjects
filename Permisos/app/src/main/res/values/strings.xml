@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permisos</string>
+    <string name="permiso_SMS"></string>
+    <string name="permiso_ALMACENAMIENTO"></string>
+</resources>
