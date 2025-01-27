@@ -16,7 +16,38 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f9bbc1-9d00-4ab9-b3da-c1b6ab9bf54d" name="Changes" comment="" />
+    <list default="true" id="69f9bbc1-9d00-4ab9-b3da-c1b6ab9bf54d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Manzanas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Peras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Platanos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/frutero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/manzana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/pera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/platano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/layout/fragment_manzanas.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/layout/fragment_peras.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/layout/fragment_platanos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/java/com/example/fragmentestatico/SegundoFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/java/com/example/fragmentestatico/TercerFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/res/layout/fragment_segundo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/res/layout/fragment_tercer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Fragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Fragment1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Fragment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/Fragment2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/java/com/example/ejerciciofragmentdinamico/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/frutero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/manzana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/pera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/drawable/platano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/layout/fragment_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/layout/fragment_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EjercicioFragmentDinamico/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FracmentosDinamicos/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FracmentosDinamicos/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/res/layout/fragment_primer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FragmentEstatico/app/src/main/res/layout/fragment_primer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Permisos/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Permisos/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Permisos/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Permisos/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Permisos/app/src/main/java/com/example/permisos/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Permisos/app/src/main/java/com/example/permisos/MainActivity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +56,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[9xjnxo9xj7dmjfxs]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\alumno\.android\avd\Pixel_3a_API_35_extension_level_13_x86_64.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -51,11 +82,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alumno/AndroidStudioProjects/Calculadora"
+    "last_opened_file_path": "C:/Users/alumno/AndroidStudioProjects/Calculadorabasica"
   }
 }]]></component>
   <component name="RunManager">

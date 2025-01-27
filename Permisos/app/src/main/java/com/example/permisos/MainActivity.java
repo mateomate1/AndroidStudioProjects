@@ -3,6 +3,7 @@ package com.example.permisos;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.Manifest;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     int CODIGO_RESPUESTA = 200;
@@ -28,12 +32,23 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void verificarPermisos() {
-        int permisoAlmacenamiento = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        String[] permisos;
-        if(permisoAlmacenamiento== PackageManager.PERMISSION_GRANTED){
-            Toast.makeText(this, "Permitido", Toast.LENGTH_SHORT).show();
-        } else {
-            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, CODIGO_RESPUESTA);
+        List<String> permisos = new ArrayList<>();
+        permisos.add(Manifest.permission.SEND_SMS);
+        permisos.add(Manifest.permission.INTERNET);
+        permisos.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        permisos.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+
+        List<String> request = new ArrayList<>();
+
+        for (String permiso : permisos) {
+            if (ContextCompat.checkSelfPermission(this,permiso) == PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(this,permiso.toString()+" CONCEDIDO", Toast.LENGTH_SHORT).show();
+            } else {
+                request.add(permiso);
+            }
+        }
+        if (!request.isEmpty()) {
+            requestPermissions(request.toArray(new String[0]), CODIGO_RESPUESTA);
         }
     }
 }

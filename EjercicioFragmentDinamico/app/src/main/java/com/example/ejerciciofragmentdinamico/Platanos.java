@@ -7,21 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Fragment1#newInstance} factory method to
+ * Use the {@link Platanos#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment1 extends Fragment {
+public class Platanos extends Fragment {
 
-    public interface OnButtonClickListener {
-        void onButtonClick(int viewId);
-    }
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,37 +23,8 @@ public class Fragment1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    public View.OnClickListener listener;
 
-    public Button getBotonManzana() {
-        return botonManzana;
-    }
-
-    public void setBotonManzana(Button botonManzana) {
-        this.botonManzana = botonManzana;
-    }
-
-    public Button getBotonPera() {
-        return botonPera;
-    }
-
-    public void setBotonPera(Button botonPera) {
-        this.botonPera = botonPera;
-    }
-
-    public Button getBotonPlatano() {
-        return botonPlatano;
-    }
-
-    public void setBotonPlatano(Button botonPlatano) {
-        this.botonPlatano = botonPlatano;
-    }
-
-    static Button botonManzana;
-    static Button botonPera;
-    static Button botonPlatano;
-
-    public Fragment1() {
+    public Platanos() {
         // Required empty public constructor
     }
 
@@ -70,11 +34,11 @@ public class Fragment1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment1.
+     * @return A new instance of fragment Platanos.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment1 newInstance(String param1, String param2) {
-        Fragment1 fragment = new Fragment1();
+    public static Platanos newInstance(String param1, String param2) {
+        Platanos fragment = new Platanos();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -95,18 +59,6 @@ public class Fragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_1, container, false);
-
-        botonManzana = view.findViewById(R.id.buttonManzana);
-        botonPera = view.findViewById(R.id.buttonPera);
-        botonPlatano = view.findViewById(R.id.buttonPlatano);
-        botonManzana.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        return view;
+        return inflater.inflate(R.layout.fragment_platanos, container, false);
     }
-
 }

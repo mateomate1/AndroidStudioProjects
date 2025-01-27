@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondoFragments"
-    app:layout_anchorGravity="center"
-    tools:context=".Fragment2">
+    tools:context=".Peras">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="361dp"
-        android:layout_height="311dp"
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/frutero" />
-
+        android:src="@drawable/pera" />
 </FrameLayout>
