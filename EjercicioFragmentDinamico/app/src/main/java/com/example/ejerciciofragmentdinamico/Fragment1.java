@@ -98,15 +98,17 @@ public class Fragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_1, container, false);
 
         botonManzana = view.findViewById(R.id.buttonManzana);
+        botonManzana.setOnClickListener(v -> notifyActivity(R.id.buttonManzana));
         botonPera = view.findViewById(R.id.buttonPera);
+        botonPera.setOnClickListener(v -> notifyActivity(R.id.buttonPera));
         botonPlatano = view.findViewById(R.id.buttonPlatano);
-        botonManzana.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        botonPlatano.setOnClickListener(v -> notifyActivity(R.id.buttonPlatano));
 
-            }
-        });
         return view;
+    }
+
+    private void notifyActivity(int buttonId) {
+        ((MainActivity) requireActivity()).changeFragment(buttonId);
     }
 
 }
