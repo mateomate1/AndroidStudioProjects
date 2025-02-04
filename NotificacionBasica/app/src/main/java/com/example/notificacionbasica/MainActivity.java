@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View view) {
+                createNotificationChannel();
                 createNotification();
             }
         });
@@ -73,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
     private void createNotificationChannel(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             CharSequence name = "Notificacion";
-            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel notificationChannel = null;
+            notificationChannel = new NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             notificationManager.createNotificationChannel(notificationChannel);
         }
