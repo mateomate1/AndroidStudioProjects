@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.gridviewpersonalizado"
+    namespace = "com.example.listviewpersonalizado"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.gridviewpersonalizado"
-        minSdk = 21
+        applicationId = "com.example.listviewpersonalizado"
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

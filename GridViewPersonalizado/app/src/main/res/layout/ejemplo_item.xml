@@ -9,9 +9,8 @@
         android:id="@+id/imageViewFoto"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="49dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:mipmap/sym_def_app_icon" />
@@ -20,11 +19,11 @@
         android:id="@+id/textViewTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="Titulo Ejemplo"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageViewFoto"
-        app:layout_constraintTop_toTopOf="@+id/imageViewFoto" />
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFoto"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFoto"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFoto" />
 
     <TextView
         android:id="@+id/textViewSubtitulo"

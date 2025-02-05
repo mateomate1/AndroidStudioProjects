@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    ListView lista;
+    GridView lista;
     List<Ejemplo> ejemploList;
 
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lista = (ListView) findViewById(R.id.listViewEjemplo);
+        lista = (GridView) findViewById(R.id.listViewEjemplo);
         ejemploList = new ArrayList<>();
         ejemploList.add(new Ejemplo("MA1", "Subtitulo Ejemplo 1", "", 2));
         ejemploList.add(new Ejemplo("MA2", "Subtitulo Ejemplo 2", "", 2));

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GridViewPersonalizado"
+rootProject.name = "ListViewPersonalizado"
 include(":app")
  

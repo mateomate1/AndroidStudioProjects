@@ -1,4 +1,4 @@
-package com.example.gridviewpersonalizado;
+package com.example.listviewpersonalizado;
 
 import org.junit.Test;
 
