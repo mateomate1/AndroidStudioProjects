@@ -10,7 +10,7 @@ public class DBAyudante extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NOMBRE = "agenda.db";
-    private static final String DATABASE_TABLE = "t_contactos";
+    public static final String DATABASE_TABLE = "t_contactos";
 
     public DBAyudante(@Nullable Context context) {
         super(context, DATABASE_NOMBRE, null, DATABASE_VERSION);
@@ -22,12 +22,13 @@ public class DBAyudante extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nombre TEXT NOT NULL," +
                 "telefono TEXT NOT NULL," +
-                "correo_electronico TEXT)");
+                "correo_electronico TEXT)"
         );
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE "+DATABASE_TABLE);
+        onCreate(db);
     }
 }
