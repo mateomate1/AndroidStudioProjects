@@ -1,6 +1,7 @@
 package com.example.ejemplobdd;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +51,20 @@ public class FormularioActivity extends AppCompatActivity {
                 }
             }
         });
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // Cierra la actividad y vuelve a la anterior
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void limpiar(){

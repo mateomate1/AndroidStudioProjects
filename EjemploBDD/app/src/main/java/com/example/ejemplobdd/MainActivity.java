@@ -1,25 +1,30 @@
 package com.example.ejemplobdd;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ejemplobdd.db.DBAyudante;
+import com.example.ejemplobdd.adaptadores.ListaContactosAdapter;
+import com.example.ejemplobdd.db.DbContactos;
+import com.example.ejemplobdd.entidad.Contactos;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnBDD;
+    RecyclerView listaContactos;
+    DbContactos dbContactos;
+    ListaContactosAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,23 +35,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        listaContactos = findViewById(R.id.listaContactos);
+        listaContactos.setLayoutManager(new LinearLayoutManager(this));
 
-        btnBDD = findViewById(R.id.btnBDD);
-        btnBDD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DBAyudante dbAyudante = new DBAyudante(MainActivity.this);
-                SQLiteDatabase db = dbAyudante.getWritableDatabase();
-                if(db != null){
-                    Toast.makeText(MainActivity.this, "Base de datos creada", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(MainActivity.this, "Error al crear la base de datos", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        dbContactos = new DbContactos(MainActivity.this);
+
+        adapter = new ListaContactosAdapter(dbContactos.mostrarContactos());
+        listaContactos.setAdapter(adapter);
+
+        cargarContactos();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargarContactos();
     }
 
     @Override
@@ -68,5 +73,9 @@ public class MainActivity extends AppCompatActivity {
     private void nuevoRegistro(){
         Intent intent = new Intent(this, FormularioActivity.class);
         startActivity(intent);
+    }
+
+    private void cargarContactos(){
+        adapter.setListaContactos(dbContactos.mostrarContactos());
     }
 }
