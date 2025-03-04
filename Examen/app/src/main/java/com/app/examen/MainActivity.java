@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
     FragmentTransaction transaction;
-    Fragment fragmentoSaludo, fragmentoLista, fragmentoAzul;
+    Fragment fragmentoSaludo, fragmentoLista, fragmentoAzul, fragmentoCalculo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentoSaludo = new SaludoFragment();
         fragmentoLista = new ListadoFragment();
         fragmentoAzul = new AzulFragment();
+        fragmentoCalculo = new CalculoFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.contenedor, fragmentoSaludo).commit();
     }
     @Override
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.opcAlarma){
             //Codigo
         } else if (id == R.id.opcCalculo){
-            //Codigo
+            transaction.replace(R.id.contenedor, fragmentoCalculo);
+            transaction.addToBackStack(null);
         }
         transaction.commit();
         return super.onOptionsItemSelected(item);
