@@ -27,9 +27,9 @@ public class CalculoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_calculo, container, false);
-        practica1 = v.findViewById(R.id.practica1);
-        practica2 = v.findViewById(R.id.practica2);
-        examen = v.findViewById(R.id.examen);
+        practica1 = v.findViewById(R.id.num1);
+        practica2 = v.findViewById(R.id.num2);
+        examen = v.findViewById(R.id.num3);
         media = v.findViewById(R.id.media);
         btnBorrar = v.findViewById(R.id.btnBorrar);
         btnBorrar.setOnClickListener(new View.OnClickListener() {

@@ -58,7 +58,7 @@ public class AzulFragment extends Fragment {
         notificacion = new NotificationCompat.Builder(v.getContext(), CHANNEL_ID);
         notificacion.setSmallIcon(R.drawable.baseline_priority_high_24);
         notificacion.setContentTitle("¡Cuidado!");
-        notificacion.setContentText(" Acabas de pulsar el botón de notificación de la aplicación de Mateo Ayarra");
+        notificacion.setContentText("Acabas de pulsar el botón de notificación de la aplicación de Mateo Ayarra");
         notificacion.setColor(Color.RED);
         notificacion.setPriority(NotificationCompat.PRIORITY_DEFAULT);
         notificacion.setVibrate(new long[]{1000, 1000, 1000, 1000});

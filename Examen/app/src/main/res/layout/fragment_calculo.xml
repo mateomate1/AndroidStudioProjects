@@ -11,39 +11,39 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/practica1"
+            android:id="@+id/num1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:ems="10"
             android:hint="Nota de la practica 1:"
             android:inputType="numberDecimal"
-            app:layout_constraintBottom_toTopOf="@+id/practica2"
+            app:layout_constraintBottom_toTopOf="@+id/num2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btnBorrar"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <EditText
-            android:id="@+id/practica2"
+            android:id="@+id/num2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nota de la practica 2:"
             android:inputType="numberDecimal"
-            app:layout_constraintBottom_toTopOf="@+id/examen"
-            app:layout_constraintStart_toStartOf="@+id/practica1"
-            app:layout_constraintTop_toBottomOf="@+id/practica1" />
+            app:layout_constraintBottom_toTopOf="@+id/num3"
+            app:layout_constraintStart_toStartOf="@+id/num1"
+            app:layout_constraintTop_toBottomOf="@+id/num1" />
 
         <EditText
-            android:id="@+id/examen"
+            android:id="@+id/num3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nota del Examen:"
             android:inputType="numberDecimal"
             app:layout_constraintBottom_toBottomOf="@+id/checkBox"
-            app:layout_constraintStart_toStartOf="@+id/practica2"
-            app:layout_constraintTop_toBottomOf="@+id/practica2" />
+            app:layout_constraintStart_toStartOf="@+id/num2"
+            app:layout_constraintTop_toBottomOf="@+id/num2" />
 
         <Button
             android:id="@+id/btnCalcular"
@@ -62,7 +62,7 @@
             android:layout_marginTop="16dp"
             android:text="Borrar Datos"
             app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
-            app:layout_constraintStart_toEndOf="@+id/practica1"
+            app:layout_constraintStart_toEndOf="@+id/num1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintVertical_chainStyle="packed" />
@@ -72,8 +72,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@+id/examen"
-            app:layout_constraintTop_toBottomOf="@+id/examen" />
+            app:layout_constraintStart_toStartOf="@+id/num3"
+            app:layout_constraintTop_toBottomOf="@+id/num3" />
 
         <CheckBox
             android:id="@+id/checkBox"
