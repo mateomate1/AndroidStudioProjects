@@ -31,11 +31,14 @@ public class ListadoFragment extends Fragment {
         Contacto c2 = new Contacto("Papa", "654321987", "papa@gmail.com", R.drawable.ic_android_black_24dp);
         Contacto c3 = new Contacto("Hermano", "693852741", "mama@gmail.com", R.drawable.ic_android_black_24dp);
         Contacto c4 = new Contacto("Hermana", "612359847", "mama@gmail.com", R.drawable.ic_android_black_24dp);
+        Contacto c5 = new Contacto("Profe", "999999999", "mateo@merece10.com", R.drawable.ic_android_black_24dp);
+
 
         lista.add(c1);
         lista.add(c2);
         lista.add(c3);
         lista.add(c4);
+        lista.add(c5);
 
         if (lista != null && !lista.isEmpty()) {
             AdaptadorContacto adapter = new AdaptadorContacto(v.getContext(), R.layout.lista_item, lista);

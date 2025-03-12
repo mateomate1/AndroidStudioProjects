@@ -1,5 +1,8 @@
 package com.example.examen2ev_mariogarcia.misFragments;
+import static androidx.core.content.ContentProviderCompat.requireContext;
+
 import android.app.AlarmManager;
+import android.app.Fragment;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;

@@ -16,6 +16,7 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +46,6 @@ public class AzulFragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View view) {
-                Toast.makeText(v.getContext(), "Si", Toast.LENGTH_SHORT).show();
                 createNotificationChannel();
                 createNotification();
             }
@@ -57,10 +57,9 @@ public class AzulFragment extends Fragment {
     private void createNotification() {
         notificacion = new NotificationCompat.Builder(v.getContext(), CHANNEL_ID);
         notificacion.setSmallIcon(R.drawable.baseline_priority_high_24);
-        notificacion.setContentTitle("¡Cuidado!");
-        notificacion.setContentText("Acabas de pulsar el botón de notificación de la aplicación de Mateo Ayarra");
-        notificacion.setColor(Color.RED);
-        notificacion.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        notificacion.setContentTitle(Html.fromHtml("<font color='#FF0000'><b>¡Cuidado!</b></font>"));
+        notificacion.setContentText(Html.fromHtml("<font color='#FF9800'>Acabas de pulsar el botón de notificación de la aplicación de Mateo Ayarra</font>"));
+        notificacion.setPriority(NotificationCompat.PRIORITY_MAX);
         notificacion.setVibrate(new long[]{1000, 1000, 1000, 1000});
         notificacion.setDefaults(Notification.DEFAULT_SOUND);
         NotificationManagerCompat notificationManagerCompat;
@@ -86,7 +85,7 @@ public class AzulFragment extends Fragment {
 
         for (String permiso : permisos) {
             if (ContextCompat.checkSelfPermission(v.getContext(),permiso) == PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(v.getContext(),permiso.toString()+" CONCEDIDO", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),permiso.toString()+"Permiso de notificaciones concedido", Toast.LENGTH_SHORT).show();
             } else {
                 request.add(permiso);
             }

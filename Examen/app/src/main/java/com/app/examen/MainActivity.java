@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             calendar.set(Calendar.HOUR_OF_DAY, 12);
             calendar.set(Calendar.MINUTE, 30);
             calendar.set(Calendar.SECOND, 0);
-
+            Toast.makeText(this, "Entrando a la creacion de la alarma", Toast.LENGTH_SHORT).show();
             setAlarm(1, calendar.getTimeInMillis(),this);
         } else if (id == R.id.opcCalculo){
             transaction.replace(R.id.contenedor, fragmentoCalculo);
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("UnspecifiedImmutableFlag")
     public static void setAlarm(int i, Long timestamp, Context ctx){
         AlarmManager alarmManager = (AlarmManager) ctx.getSystemService(ALARM_SERVICE);
+        Toast.makeText(ctx, "Entrando al alarm reciever", Toast.LENGTH_SHORT).show();
         Intent alarmIntent = new Intent(ctx, AlarmReceiver.class);
         PendingIntent pendingIntent;
         pendingIntent = PendingIntent.getBroadcast(ctx, i, alarmIntent, PendingIntent.FLAG_ONE_SHOT);

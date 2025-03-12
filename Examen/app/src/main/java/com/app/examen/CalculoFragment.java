@@ -35,6 +35,7 @@ public class CalculoFragment extends Fragment {
         btnBorrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                checkBox.setChecked(false);
                 practica1.setText("");
                 practica2.setText("");
                 examen.setText("");

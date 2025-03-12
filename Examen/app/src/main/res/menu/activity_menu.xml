@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/opcnListado"
-        android:title="Listado contactos"/>
-    <item
-        android:id="@+id/opcNotificacion"
-        android:title="Notificación" />
-    <item
-        android:id="@+id/opcAlarma"
-        android:title="Alarma" />
-    <item
-        android:id="@+id/opcCalculo"
-        android:title="Calculo nota " />
+        android:id="@+id/submenu"
+        android:title="Examen Mateo Ayarra Barbero">
+        <menu>
+            <item
+                android:id="@+id/opcnListado"
+                android:title="Listado contactos"/>
+            <item
+                android:id="@+id/opcNotificacion"
+                android:title="Notificación" />
+            <item
+                android:id="@+id/opcAlarma"
+                android:title="Alarma" />
+            <item
+                android:id="@+id/opcCalculo"
+                android:title="Calculo nota " />
+        </menu>
+    </item>
 </menu>
